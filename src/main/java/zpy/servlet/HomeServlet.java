@@ -26,12 +26,10 @@ public class HomeServlet extends HttpServlet {
 			throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 		String method = request.getParameter("method");
-		int maxPage = DbUtils.getMaxPage();
-		request.setAttribute("maxPage", maxPage);
-	if (method == null) {
+		
+		if (method == null) {
 			main(request, response);
-			request.getRequestDispatcher("main.jsp")
-					.forward(request, response);
+			request.getRequestDispatcher("main.jsp").forward(request, response);
 		} else if (method.equals("get")) {
 			main(request, response);
 			get(request, response);
@@ -73,21 +71,29 @@ public class HomeServlet extends HttpServlet {
 	public void main(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String cid = request.getParameter("cid");
+		int maxPage = DbUtils.getMaxPage(cid);
+		
+		request.setAttribute("maxPage", maxPage);
+
 		
 		String sql = null;
 		String page_init = request.getParameter("page");
 
 		int page = 1;
-		if(page_init!=null){
+		if (page_init != null) {
 			page = Integer.parseInt(page_init);
-			
+
 		}
 		request.setAttribute("page", page);
 		if (cid == null) {
-			sql = "select b.id as id,title,content,createdtime,name as category,c.id as categoryid  from blog b,category c where  category_id=c.id order by b.id desc  limit "+(10*(page-1))+","+(page*10-1);
+			sql = "select b.id as id,title,content,createdtime,name as category,c.id as categoryid  from blog b,category c where  category_id=c.id order by b.id desc  limit "
+					+ (10 * (page - 1)) + ",10";
 		} else {
 			sql = "select b.id as id,title,content,createdtime,name as category,c.id as categoryid  from blog b,category c where  category_id=c.id and category_id="
-					+ cid + " order by b.id desc  limit "+(10*(page-1))+","+(page*10-1);
+					+ cid
+					+ " order by b.id desc  limit "
+					+ (10 * (page - 1))
+					+ ",10";
 		}
 		// DButils中核心类，生成对象时传递数据源对象
 		QueryRunner qr = DbHelper.getQueryRunner();
@@ -127,10 +133,10 @@ public class HomeServlet extends HttpServlet {
 					int a_count;
 					if (count_map.get(cate.getLevel() / 100) != null) {
 						a_count = count_map.get(cate.getLevel() / 100);
-						count_map.put(cate.getLevel() / 100, a_count+1);
-					}else{
+						count_map.put(cate.getLevel() / 100, a_count + 1);
+					} else {
 						a_count = 0;
-						count_map.put(cate.getLevel() / 100,1);
+						count_map.put(cate.getLevel() / 100, 1);
 					}
 					c_array[cate.getLevel() / 100][a_count] = cate;
 				}
@@ -140,7 +146,6 @@ public class HomeServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 
-		
 		// 查询最新的评论
 		sql = "select id,username,content,blog_id as blogid from comment order by id desc limit 0,4";
 		List comments = null;

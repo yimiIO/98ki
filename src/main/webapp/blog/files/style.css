@@ -1441,7 +1441,7 @@ a:active.button,button:active,.submit:active {
 	margin-bottom: .3em
 }
 
-.blog article:nth-child(5) {
+.blog article:nth-child(10) {
 	border-bottom: 0 !important;
 	margin-bottom: 0 !important;
 	padding-bottom: 0 !important

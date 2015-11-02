@@ -8,7 +8,8 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js"
 	type="text/javascript" charset="utf-8"></script>
-<meta name="wumiiVerification" content="c0a44328-75fa-4118-b1dd-5feb9d2656b4" />
+<meta name="wumiiVerification"
+	content="c0a44328-75fa-4118-b1dd-5feb9d2656b4" />
 <meta charset="utf-8">
 
 
@@ -34,13 +35,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- For all browsers -->
-<link rel="stylesheet" type="text/css" href="/files/style.css">
-<link rel="stylesheet" type="text/css" href="/files/blog.css">
+<link rel="stylesheet" type="text/css" href="files/style.css">
+<link rel="stylesheet" type="text/css" href="files/blog.css">
 
 
 
 <!--[if lt IE 9]>
-	<link rel="stylesheet" type="text/css" href="/files/ie.css" />
+	<link rel="stylesheet" type="text/css" href="files/ie.css" />
 	<![endif]-->
 
 
@@ -77,18 +78,14 @@
 				<ul class="social">
 					<li class="facebook"><a
 						href="http://www.facebook.com/BernieZhang428"
-						title="Like me on Facebook" target="_blank">facebook</a>
-					</li>
+						title="Like me on Facebook" target="_blank">facebook</a></li>
 					<li class="github"><a href="https://github.com/berniezhang428"
-						title="Follow me on Github" target="_blank">github</a>
-					</li>
+						title="Follow me on Github" target="_blank">github</a></li>
 					<li class="qq"><a
 						href="http://wpa.qq.com/msgrd?v=3&uin=28210913&site=qq&menu=yes"
-						title="Connect with me on QQ" target="_blank">qq</a>
-					</li>
+						title="Connect with me on QQ" target="_blank">qq</a></li>
 					<li class="weibo"><a href="http://weibo.com/woshizhangpengyu/"
-						title="Connect with me on weibo" target="_blank">weibo</a>
-					</li>
+						title="Connect with me on weibo" target="_blank">weibo</a></li>
 				</ul>
 
 				<nav>
@@ -96,23 +93,14 @@
 					<ul id="nav">
 
 						<li class="page_item page-item-2"><a
-							href="http://www.98ki.com/code">码农</a>
-						</li>
+							href="http://www.98ki.com/code">码农</a></li>
 						<li class="page_item page-item-5"><a
-							href="http://www.98ki.com/photo">摄影</a>
-						</li>
-						<li class="page_item page-item-7"><a
-							href="http://tieba.baidu.com/f?kw=%E4%BB%BB%E5%B2%81%E6%9C%88%E9%A3%8E%E5%B9%B2%E7%90%86%E6%83%B3%E6%89%BE%E4%B8%8D%E5%9B%9E%E7%9C%9F%E7%9A%84%E6%88%91"
-							target="_blank">生活</a>
-						</li>
-						<li class="page_item page-item-9"><a href="/blog">技术博客</a>
-						</li>
-						<li class="page_item page-item-9"><a href="/goods">商品</a>
-						</li>
+							href="http://www.98ki.com/photo">摄影</a></li>
+						
+						<li class="page_item page-item-9"><a href="/blog">技术博客</a></li>
 
 						<li class="page_item page-item-11"><a
-							href="http://www.98ki.com/contact">联系</a>
-						</li>
+							href="http://www.98ki.com/contact">联系</a></li>
 
 					</ul>
 

@@ -7,13 +7,17 @@ import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.ResultSetHandler;
 
 public class DbUtils {
-	public static int getMaxPage(){
-		String sql = "select count(*) from blog";
+	public static int getMaxPage(String cid){
+		String sql = "";
+		if(cid==null){
+			sql = "select count(*) from blog";
+		}else{
+			sql = "select count(*) from blog where category_id="+cid;
+		}
 		QueryRunner qr = DbHelper.getQueryRunner();
 		int count = 0;
 		try {
-			
-		     count = qr.query("select count(*) as count from blog", new ResultSetHandler<Integer>(){  
+		     count = qr.query(sql, new ResultSetHandler<Integer>(){  
 		    	  
 	                public Integer handle(ResultSet rs) throws SQLException {  
 	                    if(rs.next()){  

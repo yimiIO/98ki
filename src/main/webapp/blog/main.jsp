@@ -1,17 +1,13 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
-<%@include file="/header.jsp"%>
 <%@ page import="java.util.List"%>
 <%@ page import="java.text.SimpleDateFormat"%>
 <%@ page import="zpy.model.*"%>
+<%@ include file="/header.jsp"%>
 
 
-<div id="content-detail" class="content blog clearfix"
-	style="opacity: 1; top: 0px;">
-
+<div id="content-detail" class="content blog clearfix" style="opacity: 1; top: 0px;">
 	<div class="row">
-
-		<div class="col-9">
-
+		<div class="col-8">
 			<%
 				List list = (List) request.getAttribute("blogs");
 				for (int i = 0; i < list.size(); i++) {
@@ -23,54 +19,17 @@
 					sdf = new SimpleDateFormat("HH:mm:ss");
 					String time = sdf.format(blog.getCreatedTime());
 			%>
-
 			<article>
-
-				<h1>
+				<h3>
 					<a href="/blog/HomeServlet?method=get&id=<%=blog.getId()%>"><%=blog.getTitle()%></a>
-				</h1>
+				</h3>
 				<p class="left text-light">
 					类别： <a href="/blog/HomeServlet?cid=<%=blog.getCategoryId()%>"><%=blog.getCategory()%>
 					</a>
 				</p>
-
-
-				<ul class="share">
-
-					<li>
-					
-				
-							<wb:like appkey="2Hc0Sm" type="number"></wb:like>
-								
-							
-					</li>
-				</ul>
-
-
-
-
-				<br> <br>
-
-
-				<p>
-					<%
-						String source = blog.getContent();
-							int length = 500;
-							if (source.length() < 500) {
-								length = source.length();
-							}
-							String newString = source.substring(0, length);
-
-							request.setAttribute("newString", newString);
-					%>
-
-					<%=newString%>
-
-
+				<p class="right text-light">
+					日期： <%=date%> <%=time%>
 				</p>
-				</br> <a class="button"
-					href="http://www.98ki.com/blog/HomeServlet?method=get&id=<%=blog.getId()%>">阅读全文
-					more</a>
 
 			</article>
 
@@ -80,11 +39,9 @@
 
 			<div id="page" class="page"></div>
 
-
-
 		</div>
 
-		<div class="col-3">
+		<div class="col-4">
 			<ul class="sidebar">
 
 				<iframe width="100%" height="350" class="share_self" frameborder="0"
@@ -150,28 +107,18 @@
 					%>
 					<li><a
 						href="/blog/HomeServlet?method=get&id=<%=blog.getId()%>"
-						target="_blank"><%=blog.getTitle()%></a>
-					</li>
+						target="_blank"><%=blog.getTitle()%></a></li>
 
 					<%
 						}
 					%>
 				</ul>
-				
-
-
-
-
-
-
-
 
 			</ul>
 		</div>
 	</div>
 
 </div>
-
 
 
 

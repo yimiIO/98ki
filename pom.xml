@@ -100,5 +100,6 @@
 
 	<build>
 		<finalName>ki</finalName>
+		<defaultGoal>compile</defaultGoal>
 	</build>
 </project>
