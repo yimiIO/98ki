@@ -1,18 +1,22 @@
 <!-- Configuration file for UrlRewriteFilter http://www.tuckey.org/urlrewrite/ -->
 <urlrewrite>
 	<rule>
-		<from>/blog/index.html</from>
-		<to>/blog/HomeServlet</to>
+		<from>/page([0-9]+).html$</from>
+		<to>/blog/HomeServlet?page=$1</to>
 	</rule>
-
+	
 	<rule>
-		<from>/blog/([a-z]+)_([0-9]+).html$</from>
+		<from>/([a-z]+)_([0-9]+).html$</from>
 		<to>/blog/HomeServlet?method=$1&amp;id=$2</to>
 	</rule>
 
 	<rule>
-		<from>/blog/([0-9]+).html$</from>
+		<from>/cid([0-9]+).html$</from>
 		<to>/blog/HomeServlet?cid=$1</to>
+	</rule>
+	<rule>
+		<from>/cid([0-9]+)_page([0-9]+).html$</from>
+		<to>/blog/HomeServlet?cid=$1&amp;page=$2</to>
 	</rule>
 
 

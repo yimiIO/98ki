@@ -87,7 +87,7 @@ var jiathis_config = {data_track_clickback:'true'};
 				<h2>分类</h2>
 				<ul>
 
-					<a href="http://www.98ki.com/blog">全部</a>
+					<a href="/">全部</a>
 					<%
 						List p_cate = (List) request.getAttribute("p_cate");
 						for (int i = 0; i < p_cate.size(); i++) {
@@ -116,7 +116,7 @@ var jiathis_config = {data_track_clickback:'true'};
 						%>
 
 						<li class="tmenu"><a
-							href="/blog/<%=cate2.getId()%>.html"><%=cate2.getName()%></a>
+							href="/cid<%=cate2.getId()%>.html"><%=cate2.getName()%></a>
 						</li>
 
 						<%
@@ -143,7 +143,7 @@ var jiathis_config = {data_track_clickback:'true'};
 							blog = (Blog) recentBlogs.get(i);
 					%>
 					<li><a
-						href="/blog/get_<%=blog.getId()%>.html"
+						href="/get_<%=blog.getId()%>.html"
 						target="_blank"><%=blog.getTitle()%></a></li>
 
 					<%

@@ -91,16 +91,15 @@
 				<nav>
 
 					<ul id="nav">
+						<li class="page_item page-item-9"><a href="/">技术博客</a></li>
 
 						<li class="page_item page-item-2"><a
 							href="http://www.98ki.com/code">码农</a></li>
 						<li class="page_item page-item-5"><a
 							href="http://www.98ki.com/photo">摄影</a></li>
-						
-						<li class="page_item page-item-9"><a href="/blog">技术博客</a></li>
 
 						<li class="page_item page-item-11"><a
-							href="http://www.98ki.com/contact">联系</a></li>
+							href="http://www.98ki.com/contact">关于</a></li>
 
 					</ul>
 

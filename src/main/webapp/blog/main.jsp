@@ -21,10 +21,10 @@
 			%>
 			<article>
 				<h3>
-					<a href="/blog/get_<%=blog.getId()%>.html"><%=blog.getTitle()%></a>
+					<a href="/get_<%=blog.getId()%>.html"><%=blog.getTitle()%></a>
 				</h3>
 				<p class="left text-light">
-					类别： <a href="/blog/<%=blog.getCategoryId()%>.html"><%=blog.getCategory()%>
+					类别： <a href="/cid<%=blog.getCategoryId()%>.html"><%=blog.getCategory()%>
 					</a>
 				</p>
 				<p class="right text-light">
@@ -51,7 +51,7 @@
 				<h2>分类</h2>
 				<ul>
 
-					<a href="http://www.98ki.com/blog">全部</a>
+					<a href="/">全部</a>
 					<%
 						List p_cate = (List) request.getAttribute("p_cate");
 						for (int i = 0; i < p_cate.size(); i++) {
@@ -79,7 +79,7 @@
 						%>
 
 						<li class="tmenu"><a
-							href="/blog/<%=cate2.getId()%>.html"><%=cate2.getName()%></a>
+							href="/cid<%=cate2.getId()%>.html"><%=cate2.getName()%></a>
 						</li>
 
 						<%
@@ -106,7 +106,7 @@
 							Blog blog = (Blog) recentBlogs.get(i);
 					%>
 					<li><a
-						href="/blog/get_<%=blog.getId()%>.html"
+						href="/get_<%=blog.getId()%>.html"
 						target="_blank"><%=blog.getTitle()%></a></li>
 
 					<%
@@ -126,7 +126,7 @@
 
 <script>
 var Page = ${page} ,MaxPage = ${maxPage};
-locat()
+locat();
 if(MaxPage != "" && MaxPage > 1){
         document.getElementById("page").innerHTML = Pagehtml()
         document.getElementById("page_btn").onclick = function(){
@@ -136,7 +136,7 @@ if(MaxPage != "" && MaxPage > 1){
                         if (MaxPage < _page){
                                 _page = MaxPage
                         }
-                        this.href = "?page=" + _page
+                        this.href = "page" + _page +".html"
                 }
         }
         document.getElementById("page_text").onkeyup = function(event) {
@@ -178,27 +178,27 @@ function Pagehtml(){//分页代码
         if (Page == 1){
                 PageStr += "<a class='page_turn'>上一页</a>"
         }else{
-                PageStr += "<a class='page_turn' href='?page="+ (Page - 1) +"'>上一页</a>"
+                PageStr += "<a class='page_turn' href='page"+ (Page - 1) +"'>上一页</a>"
         }
         if(xPage > 1){
-                PageStr += "<a href='?page=1'>1</a>"
+                PageStr += "<a href='/'>1</a>"
         }
         if(xPage > 2){
                 PageStr += " ..."
         }
         for(var j = xPage;j <= dPage;j++) {
-                PageStr += (Page == j) ? " <a class=\"on\">" + j + "</a>" : " <a href='?page="+ j +"'>" + j + "</a>";
+                PageStr += (Page == j) ? " <a class=\"on\">" + j + "</a>" : " <a href='page"+ j +".html'>" + j + "</a>";
     }
         if(dPage < MaxPage - 1){
                 PageStr += " ..."
         }
         if(dPage < MaxPage){
-                PageStr += " <a href='?page="+ MaxPage +"'>" + MaxPage + "</a>"
+                PageStr += " <a href='?page"+ MaxPage +".html'>" + MaxPage + "</a>"
         }
         if (Page == MaxPage){
                 PageStr += "<a class='page_turn'>下一页</a>"
         }else{
-                PageStr += "<a class='page_turn' href='?page="+ (Page + 1) +"'>下一页</a>"
+                PageStr += "<a class='page_turn' href='page"+ (Page + 1) +".html'>下一页</a>"
         }
         PageStr += ' 跳转到：<input id="page_text" type="text" name="page_text"><a id="page_btn" class="page_turn" href="javascript:;">GO</a>'
         return PageStr
