@@ -5,5 +5,5 @@
 </head>
 <%
 	response.sendRedirect(getServletContext().getContextPath()
-			+ "/blog/HomeServlet");
+			+ "/blog/index.html");
 %>

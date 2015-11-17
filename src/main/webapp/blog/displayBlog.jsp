@@ -116,7 +116,7 @@ var jiathis_config = {data_track_clickback:'true'};
 						%>
 
 						<li class="tmenu"><a
-							href="/blog/HomeServlet?cid=<%=cate2.getId()%>"><%=cate2.getName()%></a>
+							href="/blog/<%=cate2.getId()%>.html"><%=cate2.getName()%></a>
 						</li>
 
 						<%
@@ -143,7 +143,7 @@ var jiathis_config = {data_track_clickback:'true'};
 							blog = (Blog) recentBlogs.get(i);
 					%>
 					<li><a
-						href="/blog/HomeServlet?method=get&id=<%=blog.getId()%>"
+						href="/blog/get_<%=blog.getId()%>.html"
 						target="_blank"><%=blog.getTitle()%></a></li>
 
 					<%

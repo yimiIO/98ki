@@ -21,10 +21,10 @@
 			%>
 			<article>
 				<h3>
-					<a href="/blog/HomeServlet?method=get&id=<%=blog.getId()%>"><%=blog.getTitle()%></a>
+					<a href="/blog/get_<%=blog.getId()%>.html"><%=blog.getTitle()%></a>
 				</h3>
 				<p class="left text-light">
-					类别： <a href="/blog/HomeServlet?cid=<%=blog.getCategoryId()%>"><%=blog.getCategory()%>
+					类别： <a href="/blog/<%=blog.getCategoryId()%>.html"><%=blog.getCategory()%>
 					</a>
 				</p>
 				<p class="right text-light">
@@ -79,7 +79,7 @@
 						%>
 
 						<li class="tmenu"><a
-							href="/blog/HomeServlet?cid=<%=cate2.getId()%>"><%=cate2.getName()%></a>
+							href="/blog/<%=cate2.getId()%>.html"><%=cate2.getName()%></a>
 						</li>
 
 						<%
@@ -106,7 +106,7 @@
 							Blog blog = (Blog) recentBlogs.get(i);
 					%>
 					<li><a
-						href="/blog/HomeServlet?method=get&id=<%=blog.getId()%>"
+						href="/blog/get_<%=blog.getId()%>.html"
 						target="_blank"><%=blog.getTitle()%></a></li>
 
 					<%
