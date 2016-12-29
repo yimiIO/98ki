@@ -15,23 +15,25 @@
 									+ _bdhmProtocol
 									+ "hm.baidu.com/h.js%3F7dff31a2111bbc9caa18e047c49254f4' type='text/javascript'%3E%3C/script%3E"));
 				</script>
-				Copyright© 2014 <a class="transition"
-					href="http://www.miitbeian.gov.cn/">豫ICP备14019584 </a>
+				Copyright© 2014 <a class="transition" href="http://www.miitbeian.gov.cn/">豫ICP备14019584 </a>
 
 			</div>
 
 			<nav id="nav-footer">
 
 				<ul>
-					<li class="page_item page-item-9"><a href="/">blog</a></li>
 					<li class="page_item page-item-2"><a
-						href="http://www.98ki.com/code">coder</a></li>
+						href="/code">coder</a>
+					</li>
 					<li class="page_item page-item-5"><a
-						href="http://www.98ki.com/photo">photo</a></li>
+						href="/photo">photo</a>
+					</li>
 
-
+					<li class="page_item page-item-9"><a href="/blog">blog</a>
+					</li>
 					<li class="page_item page-item-11"><a
-						href="http://www.98ki.com/contact">about</a></li>
+						href="/contact">contact</a>
+					</li>
 				</ul>
 
 			</nav>
@@ -105,7 +107,7 @@
 
 			//Show the page once images are loaded
 
-			// Animate the header first			
+			// Animate the header first
 			$('#header').stop().animate({
 				'opacity' : '1',
 				'top' : '0'
