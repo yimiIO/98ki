@@ -27,7 +27,7 @@
 <meta property="og:image" content="files/images/zpy.png">
 <meta property="og:image:width" content="590">
 <meta property="og:image:height" content="440">
-<meta property="og:url" content="http://www.98ki.com/blog/HomeServlet" />
+<meta property="og:url" content="http://2015.98ki.com/blog/HomeServlet" />
 <meta property="og:description" content="技术？极客？生活？" />
 <!-- http://t.co/dKP3o1e -->
 <meta name="HandheldFriendly" content="True">
@@ -72,7 +72,7 @@
 
 			<div class="col-12">
 
-				<a id="logo" class="logo" href="http://www.98ki.com/">你才是程序员</a>
+				<a id="logo" class="logo" href="http://2015.98ki.com/">你才是程序员</a>
 				<div class="icon-nav">navigation</div>
 
 				<ul class="social">
@@ -91,15 +91,16 @@
 				<nav>
 
 					<ul id="nav">
-						<li class="page_item page-item-9"><a href="/">技术博客</a></li>
 
 						<li class="page_item page-item-2"><a
-							href="http://www.98ki.com/code">码农</a></li>
+							href="/code">码农</a></li>
 						<li class="page_item page-item-5"><a
-							href="http://www.98ki.com/photo">摄影</a></li>
+							href="/photo">摄影</a></li>
+
+						<li class="page_item page-item-9"><a href="/blog">技术博客</a></li>
 
 						<li class="page_item page-item-11"><a
-							href="http://www.98ki.com/contact">关于</a></li>
+							href="/contact">联系</a></li>
 
 					</ul>
 
